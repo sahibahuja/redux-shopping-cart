@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import User from './User';
+import HomeContainer from './container/HomeContainer';
 
 function App() {
   return (
     <div className="App">
-        <h1>Props</h1>
-        <User data={{name:'Sahib ahuja',age:26}}/>
+        <h1>Console Shop</h1>
+        <HomeContainer/>
     </div>
   );
 }
