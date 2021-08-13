@@ -1,10 +1,8 @@
 import React from "react";
-function Home() {
+function Home(props) {
+  // console.warn("Home",props.data)
   return (
     <div>
-      <div className="add-to-cart">
-        <img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt=""/>
-      </div>
       <h1>Playstation</h1>
       <div className="cart-wrapper">
         <div className="img-wrapper item">
@@ -15,7 +13,8 @@ function Home() {
           <span>Price:$500.00</span>
         </div>
         <div >
-          <button className="btn-wrapper-button">Add to Cart</button>
+          <button className="btn-wrapper-button" onClick={()=>props.addToCartHandler({price:500,name:'PS5'})}>Add to Cart</button>
+          <button className="remove-cart-btn" onClick={()=>{props.removeToCartHandler()}}>Remove to Cart</button>
         </div>
       </div>
     </div>
